@@ -40,7 +40,7 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:3000/success",
+    successRedirect: "https://registration-client-sigma.vercel.app/success",
     failureRedirect: "/auth/failure",
   })
 );
