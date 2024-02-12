@@ -4,15 +4,15 @@ const User = require('./models/googleSchema')
 
 
 const GOOGLE_CLIENT_ID =
-  "500617003065-3r6vm4dvco58quhkpt0g8c78vsd6vnfu.apps.googleusercontent.com";
-const GOOGLE_CLIENT_SECRET = "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";
+  "500617003065-tl9eaq8gi7crkiqa0f1i483r2e2su7oj.apps.googleusercontent.com";
+const GOOGLE_CLIENT_SECRET = "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";
 
 passport.use(
   new GoogleStrategy(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "https://registration-server-nine.vercel.app/auth/google/callback",
+      callbackURL: "https://registration-server-gules.vercel.app/auth/google/callback",
       passReqToCallback: true,
     },
     async (request, accessToken, refreshToken, profile, done) => {
