@@ -43,10 +43,10 @@ connectDatabase();
 app.use(express.json());
 
 // API routing
-app.use("https://registration-server-ten.vercel.app/auth", route);
-app.use('https://registration-server-ten.vercel.app/auth', router)
+app.use("/auth", route);
+app.use('/auth', router)
 
-app.use('https://registration-server-ten.vercel.app/auth', (req, res) => {
+app.use('/auth', (req, res) => {
   res.status(200).json({message: 'Congrats!!'})
 })
 
