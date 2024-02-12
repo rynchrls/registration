@@ -15,9 +15,7 @@
   "headers": [
     {
       "source": "/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Headers", "value": "content-type" }
-      ]
+      "headers": [{ "key": "Access-Control-Allow-Headers", "value": "*" }]
     }
   ]
 }
