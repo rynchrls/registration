@@ -12,7 +12,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "https://registration-server-gules.vercel.app/auth/google/callback",
+      callbackURL: "https://registration-server-ten.vercel.app/auth/google/callback",
       passReqToCallback: true,
     },
     async (request, accessToken, refreshToken, profile, done) => {
