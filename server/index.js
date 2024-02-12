@@ -34,7 +34,15 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // for cross resources sharing
-app.use(cors(allowCors));
+const corsOptions = {
+  origin: 'https://registration-client-sigma.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+  allowedHeaders: 'Content-Type,Authorization',
+};
+
+app.use(cors(corsOptions));
 
 // database connect
 connectDatabase();
