@@ -38,7 +38,7 @@ const corsOptions = {
   origin: 'https://registration-client-sigma.vercel.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
-  optionsSuccessStatus: 200,
+  optionsSuccessStatus: 204,
   allowedHeaders: 'Content-Type,Authorization',
 };
 
