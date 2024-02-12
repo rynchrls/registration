@@ -34,9 +34,10 @@ app.use(passport.session())
 
 // for cross resources sharing
 app.use(cors({
-  origin: 'https://registration-server-delta.vercel.app',
+  origin: '*',
   methods: "GET, POST, PUT, DELETE",
-  credentials: true
+  credentials: true,
+  allowedHeaders: true
 }));
 
 // database connect
