@@ -11,6 +11,5 @@
       "src": "/(.*)",
       "dest": "/auth"
     }
-  ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/auth" }]
+  ]
 }
