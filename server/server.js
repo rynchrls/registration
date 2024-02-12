@@ -25,7 +25,7 @@ const PORT = process.env.PORT || 5001;
 const app = express();
 
 // for google authentication
-app.use(session({ secret: 'cats', resave: true, saveUninitialized: true }))
+app.use(session({ secret: 'dc.gg', resave: true, saveUninitialized: true }))
 app.use(passport.initialize())
 app.use(passport.session())
 
