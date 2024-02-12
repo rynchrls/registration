@@ -3,6 +3,8 @@ const express = require("express");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
 
+const {registerUser, allUsers} = require('./authHandler/authenticationHandler')
+
 // google auth imports
 const session = require('express-session')
 const passport = require("passport");
@@ -10,7 +12,6 @@ require('./passport')
 
 
 // routing import
-const route = require("./route/authRoute");
 const router= require('./route/auth')
 
 // middleware import
@@ -43,7 +44,8 @@ connectDatabase();
 app.use(express.json());
 
 // API routing
-app.use("/auth/users", route);
+app.use("/auth/users/register", registerUser);
+app.use('auth/users', allUsers)
 app.use('/auth', router)
 
 app.use('/auth/u', (req, res) => {
