@@ -48,8 +48,8 @@ app.use(express.json());
 
 // API routing
 app.use("/auth/users/register", registerRoute);
-app.use('auth/users', getRoute)
-app.use('/auth', router)
+app.use('/auth/users', getRoute)
+// app.use('/auth', router)
 
 
 app.use('/auth/u', (req, res) => {
