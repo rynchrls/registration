@@ -46,7 +46,7 @@ app.use(express.json());
 app.use("/auth/users", route);
 app.use('/auth', router)
 
-app.use('/auth', (req, res) => {
+app.use('/auth/u', (req, res) => {
   res.status(200).json({message: 'Congrats!!'})
 })
 

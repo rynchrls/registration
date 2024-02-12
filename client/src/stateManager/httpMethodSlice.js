@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const methodSlice = createSlice({
   name: "http",
   initialState: {
-    http: "https://registration-server-nine.vercel.app/auth/register",
+    http: "https://registration-server-delta.vercel.app/auth/users/register",
     data: {
       email: "",
       password: "",
