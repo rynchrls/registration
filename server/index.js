@@ -46,6 +46,10 @@ app.use(express.json());
 app.use("/auth", route);
 app.use('/auth', router)
 
+app.use('/auth', (req, res) => {
+  res.status(200).json({message: 'Congrats!!'})
+})
+
 
 // middleware/error handler
 app.use(errorHandler);
