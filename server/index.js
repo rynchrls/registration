@@ -12,6 +12,8 @@ require('./passport')
 
 
 // routing import
+const registerRoute = require('./route/registerRoute')
+const getRoute = require('./route/getRoute')
 const router= require('./route/auth')
 
 // middleware import
@@ -44,9 +46,10 @@ connectDatabase();
 app.use(express.json());
 
 // API routing
-app.use("/auth/users/register", registerUser);
-app.use('auth/users', allUsers)
+app.use("/auth/users/register", registerRoute);
+app.use('auth/users', getRoute)
 app.use('/auth', router)
+
 
 app.use('/auth/u', (req, res) => {
   res.status(200).json({message: 'Congrats!!'})
