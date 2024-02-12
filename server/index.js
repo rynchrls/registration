@@ -2,6 +2,7 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
+const allowCors = require('./config/allowCors')
 
 // const {registerUser, allUsers} = require('./authHandler/authenticationHandler')
 
@@ -33,15 +34,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // for cross resources sharing
-const corsOptions = {
-  origin: 'https://registration-client-sigma.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-  allowedHeaders: 'Content-Type,Authorization',
-};
-
-app.use(cors(corsOptions));
+app.use(cors(allowCors));
 
 // database connect
 connectDatabase();
