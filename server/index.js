@@ -44,9 +44,9 @@ app.use(express.json());
 
 // API routing
 app.use("/auth/users", route);
-// app.use('/auth', router)
+app.use('/auth', router)
 
-app.use('/auth/users', (req, res) => {
+app.use('/auth', (req, res) => {
   res.status(200).json({message: 'Congrats!!'})
 })
 

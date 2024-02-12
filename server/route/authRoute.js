@@ -5,7 +5,7 @@ const route = express.Router()
 
 // HTTP methods and the callback functions
 route.get('/', allUsers)
-// route.post('/register', registerUser)
+route.post('/register', registerUser)
 
 
 module.exports = route
