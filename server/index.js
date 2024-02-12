@@ -34,7 +34,7 @@ app.use(passport.session())
 
 // for cross resources sharing
 const corsOptions = {
-  origin: 'hhttps://registration-client-sigma.vercel.app/',
+  origin: 'https://registration-client-sigma.vercel.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
