@@ -3,7 +3,7 @@ const express = require("express");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
 
-const {registerUser, allUsers} = require('./authHandler/authenticationHandler')
+// const {registerUser, allUsers} = require('./authHandler/authenticationHandler')
 
 // google auth imports
 const session = require('express-session')
