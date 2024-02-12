@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 
-const CLIENT_URL = "http://localhost:3000/";
+const CLIENT_URL = "https://registration-client-sigma.vercel.app/success";
 
 // if the login method success
 router.get("/login/success", (req, res) => {
