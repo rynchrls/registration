@@ -33,8 +33,8 @@ app.use(passport.session());
 
 // for cross resources sharing
 const corsOptions = {
-  origin: "https://beamish-mousse-2fe94a.netlify.app",
-  methods: "GET,PUT,POST,DELETE",
+  origin: "http://localhost:3000",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
 

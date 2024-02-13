@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const methodSlice = createSlice({
   name: "http",
   initialState: {
-    http: "https://register-server.onrender.com/auth/register",
+    http: "http://localhost:4000/auth/register",
     data: {
       email: "",
       password: "",
