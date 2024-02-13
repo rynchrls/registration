@@ -32,13 +32,13 @@ app.use(passport.session());
 
 
 // for cross resources sharing
-// const corsOptions = {
-//   origin: "https://lustrous-peony-c9223d.netlify.app",
-//   methods: "GET,PUT,POST,DELETE",
-//   credentials: true,
-// };
+const corsOptions = {
+  origin: "https://beamish-mousse-2fe94a.netlify.app",
+  methods: "GET,PUT,POST,DELETE",
+  credentials: true,
+};
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 // database connect
 connectDatabase();
