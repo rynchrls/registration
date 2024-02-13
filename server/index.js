@@ -33,7 +33,7 @@ app.use(passport.session());
 
 // for cross resources sharing
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://lustrous-peony-c9223d.netlify.app/",
   methods: "GET,PUT,POST,DELETE",
   credentials: true,
 };

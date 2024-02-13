@@ -7,7 +7,7 @@ function LoginSuccess() {
 
   useEffect(() => {
     const getUser = async () => {
-      fetch("http://localhost:4000/auth/login/success", {
+      fetch("https://register-server.onrender.com/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
