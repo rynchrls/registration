@@ -6,15 +6,13 @@ const cors = require("cors");
 // const {registerUser, allUsers} = require('./authHandler/authenticationHandler')
 
 // google auth imports
-const session = require('express-session')
+const session = require("express-session");
 const passport = require("passport");
-require('./passport')
-
+require("./passport");
 
 // routing import
-const registerRoute = require('./route/registerRoute')
-const getRoute = require('./route/getRoute')
-const router= require('./route/auth')
+const route = require("./route/authRoute");
+const router = require("./route/auth");
 
 // middleware import
 const errorHandler = require("./middleware/errorHandler");
@@ -28,19 +26,19 @@ const PORT = process.env.PORT || 5001;
 const app = express();
 
 // for google authentication
-app.use(session({ secret: 'dc.gg', resave: true, saveUninitialized: true }))
-app.use(passport.initialize())
-app.use(passport.session())
+app.use(session({ secret: "dc.gg", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // for cross resources sharing
 const corsOptions = {
-  origin: 'https://registration-client-sigma.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  optionsSuccessStatus: 204,
-  allowedHeaders: 'Content-Type,Authorization',
+  origin: "http://localhost:3000",
+  methods: "GET,PUT,POST,DELETE",
+  credentials: true,
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 // database connect
 connectDatabase();
@@ -49,14 +47,8 @@ connectDatabase();
 app.use(express.json());
 
 // API routing
-app.use("/auth/users/register", registerRoute);
-app.use('auth/users', getRoute)
-app.use('/auth', router)
-
-
-app.use('/auth/u', (req, res) => {
-  res.status(200).json({message: 'Congrats!!'})
-})
+app.use("/auth", route);
+app.use("/auth", router);
 
 
 // middleware/error handler

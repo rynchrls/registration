@@ -7,7 +7,7 @@ function LoginSuccess() {
 
   useEffect(() => {
     const getUser = async () => {
-      fetch("https://registration-server-chi.vercel.app/auth/login/success", {
+      fetch("http://localhost:4000/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -26,7 +26,7 @@ function LoginSuccess() {
         .catch((err) => console.log(err));
     };
     getUser();
-  }, [user]);
+  }, []);
 
   console.log(user);
 

@@ -58,7 +58,7 @@ function Hero() {
   };
 
   const Google = () => {
-    window.open('https://registration-server-nine.vercel.app/auth/google', "_self")
+    window.open('http://localhost:4000/auth/google', "_self")
   }
 
 
