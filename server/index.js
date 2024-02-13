@@ -2,7 +2,6 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
-const allowCors = require('./config/allowCors')
 
 // const {registerUser, allUsers} = require('./authHandler/authenticationHandler')
 
