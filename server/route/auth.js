@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 
-const CLIENT_URL = "http://localhost:3000/success";
+const CLIENT_URL = "https://lustrous-peony-c9223d.netlify.app/success";
 
 // if the login method success
 router.get("/login/success", (req, res) => {
@@ -40,7 +40,7 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:3000/success",
+    successRedirect: "https://lustrous-peony-c9223d.netlify.app/success",
     failureRedirect: "/auth/failure",
   })
 );
